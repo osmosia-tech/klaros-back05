@@ -1,0 +1,25 @@
+[Unit]
+Description=Gunicorn service for Osmosia-Tech-Klaros (venv)
+After=network.target
+
+[Service]
+# Utilisateur et groupe Linux (adapte si nécessaire)
+User=ec2-user
+Group=ec2-user
+
+# Dossier où se trouve le code (où réside app.py, dev_agent.py, etc.)
+WorkingDirectory=/home/ec2-user/Osmosia-Tech-Klaros
+
+# Chemin vers le bin du venv
+Environment="PATH=/home/ec2-user/Osmosia-Tech-Klaros/venv/bin"
+
+# Lancement de Gunicorn
+# On suppose que le fichier s'appelle 'app.py'
+# et que l'objet Flask s'appelle 'app'.
+ExecStart=/home/ec2-user/Osmosia-Tech-Klaros/venv/bin/gunicorn app:app -b 0.0.0.0:5000
+
+# Redémarrer si le service crash
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

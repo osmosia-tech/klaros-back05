@@ -1,0 +1,81 @@
+# === ENVIRONNEMENT PYTHON ===
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# === FICHIERS SENSIBLES / CLÉS / CONFIG ===
+.env
+*.env
+*.pem
+*.key
+credentials.json
+serviceAccountKey.json
+firebase-adminsdk*.json
+
+# === LOGS / FICHIERS TEMPORAIRES ===
+*.log
+*.gz
+*.zip
+*.tar
+*.rar
+*.db
+*.sqlite
+*.h5
+aws/
+
+# === DOSSIERS ÉDITEURS / IDES ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.old
+*.save
+
+# === FICHIERS SYSTÈME ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+ngrok
+ngrok_recovery_codes.txt
+source/
+
+# === CHECKPOINTS / MODELS / DATA ===
+.ipynb_checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+runs/
+output/
+cache/
+
+# === TRANSFORMERS / HF HUB ===
+*.safetensors
+*.token
+*.model
+tokenizers_cache/
+huggingface/
+
+venv/
+*.so
+*.pack
+venv/
+*.so
+*.pack
+
+# === AJOUTS POUR KLAROS ===
+firebase_key.json
+.env.example
+node_modules/
+dist/
+build/
+awscliv2.zip
+firebase_key.json
+*.env
+awscliv2.zip
